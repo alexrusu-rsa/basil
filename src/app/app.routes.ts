@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { Potting } from './potting/potting';
 import { Welcome } from './welcome/welcome';
 
 export const routes: Routes = [
@@ -11,7 +10,6 @@ export const routes: Routes = [
   {
     path: 'welcome',
     component: Welcome,
-    title: 'Basil',
   },
   {
     path: 'potting',

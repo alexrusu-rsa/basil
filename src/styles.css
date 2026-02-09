@@ -26,3 +26,21 @@ body > * {
   position: relative;
   z-index: 1;
 }
+
+/* Allow mat-list-item text to wrap instead of truncating with ellipsis */
+.mat-mdc-list-item {
+  height: auto !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.mat-mdc-list-item .mdc-list-item__content {
+  overflow: visible !important;
+}
+
+.mat-mdc-list-item .mdc-list-item__primary-text,
+.mat-mdc-list-item .mdc-list-item__secondary-text {
+  text-overflow: unset !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}

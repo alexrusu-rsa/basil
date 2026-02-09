@@ -1,11 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Welcome } from "./welcome/welcome";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.css',
-  imports: [Welcome],
+  imports: [RouterOutlet],
 })
 export class App {
   protected readonly title = signal('basil');

@@ -1,3 +1,23 @@
 import { Routes } from '@angular/router';
+import { Potting } from './potting/potting';
+import { Welcome } from './welcome/welcome';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'welcome',
+    pathMatch: 'full',
+  },
+  {
+    path: 'welcome',
+    component: Welcome,
+  },
+  {
+    path: 'potting',
+    loadComponent: () => import('./potting/potting').then((m) => m.Potting),
+  },
+  {
+    path: '**',
+    redirectTo: 'welcome',
+  },
+];

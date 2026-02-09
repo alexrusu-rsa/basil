@@ -21,6 +21,10 @@ export const routes: Routes = [
     loadComponent: () => import('./watering/watering').then((m) => m.Watering),
   },
   {
+    path: 'pruning',
+    loadComponent: () => import('./pruning/pruning').then((m) => m.Pruning),
+  },
+  {
     path: '**',
     redirectTo: 'welcome',
   },
